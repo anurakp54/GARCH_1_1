@@ -17,13 +17,12 @@ st.set_page_config(
 st.title("Assignment FIN S53 MODULE 4")
 st.subheader("By Anurak-JOE")
 st.write("The volatility plot and its prediction using model GARCH (1,1)")
-st.sidebar.text_input("Put Stock Name and adding '.BK' for Thai Stock", value ="CK.BKK")
+stock_name = st.sidebar.text_input("Put Stock Name and adding '.BK' for Thai Stock", value ="CK.BKK")
 
 today = str(date.today())
 start_date = str(date.today() - timedelta(days=1200))
 # df = web.DataReader(name, data_source='yahoo', start=start_date, end=today)
-name = 'PTT.BK'
-df = yf.download(name, start=start_date, end=today)
+df = yf.download(stock_name, start=start_date, end=today)
 
 def _return(dataframe):
   row = dataframe.index
