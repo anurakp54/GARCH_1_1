@@ -17,7 +17,7 @@ st.set_page_config(
 st.title("Assignment FIN S53 MODULE 4")
 st.subheader("By Anurak-JOE")
 st.write("The volatility plot and its prediction using model GARCH (1,1)")
-stock_name = st.sidebar.text_input("Put Stock Name and adding '.BK' for Thai Stock", value ="CK.BKK")
+stock_name = st.sidebar.text_input("Put Stock Name and adding '.BK' for Thai Stock", value ="CK.BK")
 
 today = str(date.today())
 start_date = str(date.today() - timedelta(days=1200))
